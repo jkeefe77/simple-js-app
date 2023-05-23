@@ -1,31 +1,11 @@
 let pokemonRepository = (function () {
-  //shows list of Pokemon and their physical descriptors and abilities
-  let pokemonList = [
-    {
-      name: "Bulbasaur",
-      height: "2'04",
-      weight: "15.2 lbs",
-      type: ["grass", "poison"],
-    },
-    {
-      name: "Charmander",
-      height: "2'",
-      weight: "18.7 lbs",
-      type: "fire",
-    },
-    {
-      name: "Snorlax",
-      height: "6'11",
-      weight: "1014.1 lbs",
-      type: "sleeping",
-    },
-  ]
+  let pokemonList = [];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
   function add(pokemon) {
     if (
       typeof pokemon === "object" &&
-      "name" in pokemon &&
-      "height" in pokemon &&
-      "type" in pokemon
+      "name" in pokemon
     ) {
       pokemonList.push(pokemon);
     } else {
@@ -43,41 +23,66 @@ let pokemonRepository = (function () {
     button.classList.add("button-class");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
+    button.addEventListener("click", function(event) {
+      showDetails(pokemon);
+    });
   }
+
+  function loadList() {
+    return fetch(apiUrl).then(function (response) {
+      return response.json();
+    }).then(function (json) {
+      json.results.forEach(function (item) {
+        let pokemon = {
+          name: item.name,
+          detailsUrl: item.url
+        };
+        add(pokemon);
+        console.log(pokemon);
+      });
+    }).catch(function (e) {
+      console.error(e);
+    })
+  }
+
+  function loadDetails(item) {
+    let url = item.detailsUrl;
+    return fetch(url).then(function (response) {
+      return response.json();
+    }).then(function (details) {
+      item.imageUrl = details.sprites.front_default;
+      item.height = details.height;
+      item.types = details.types;
+    }).catch(function (e) {
+      console.error(e);
+    });
+  }
+
+  function showDetails(item) {
+  pokemonRepository.loadDetails(item).then(function () {
+      console.log(item);
+    });
+  }
+
   return {
     add: add,
     getAll: getAll,
-    addListItem: addListItem
+    addListItem: addListItem,
+    loadList: loadList,
+    loadDetails: loadDetails,
+    showDetails: showDetails
   };
-
 })();
 
-console.log(pokemonRepository.getAll());
 
-pokemonRepository.add({ name: "Bulbasaur", height: 2.4, types: ["grass", "poison"] });
-
-console.log(pokemonRepository.getAll());
-
-pokemonRepository.getAll().forEach(function (pokemon) {
-
-  pokemonRepository.addListItem(pokemon);
+pokemonRepository.loadList().then(function () {
+  pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
 });
 
-let button = document.querySelector(".button-class");
-button.addEventListener("mouseover", func, false);
-button.addEventListener("mouseout", func1, false);
 
 
-
-function eventListener(button, pokemon) {
-  button.addEventListener("click", function () {
-    showDetails(pokemon);
-  });
-}
-  
-function showDetails(pokemon){
-    console.log(pokemon)
-}
 
 
 
