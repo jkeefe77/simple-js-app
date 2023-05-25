@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20'
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150'
 
   function add(pokemon) {
     if (
@@ -63,15 +63,17 @@ let pokemonRepository = (function () {
       console.log(item);
     });
   }
+ 
+//My Pokemon buttons dissapear if I try to add showModal function here//
 
-  return {
+    return {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
     loadList: loadList,
     loadDetails: loadDetails,
-    showDetails: showDetails
-  };
+    showDetails: showDetails,
+  }
 })();
 
 
