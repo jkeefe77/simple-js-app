@@ -1,23 +1,27 @@
 .button-class {
-    padding: 20px 30px;
+    padding: 20px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin: 16px 2px;
+    margin: 16px 20px;
+    width: 200px;
+    height: 200px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
     background-color: #91BBF2;
-    color: black;
-    border: 2px solid #265DA6;
+    color: #E5F2F2;
+    border: 2px solid #E5F2F2;
     font-family: 'Anime Ace', sans-serif;
     font-style: bold;
     font-weight: 100%;
+    border-radius: 100%;
 }
 
 .button-class:hover {
     background-color: #FFF476;
+    color: black;
 }
  
 body {
@@ -25,6 +29,7 @@ body {
     display: grid;
     margin: 0px;
     padding: 0px;
+    margin-top: -5%;
 }
 
 
@@ -46,7 +51,6 @@ body {
 }
 
 .pokeball {
-   margin-left: 500px;
     width: 150px;
     height: 150px;
     background: #fff;
@@ -56,6 +60,11 @@ body {
     box-shadow: inset -10px 10px 0 10px #ccc;
     animation: shake 1.25s cubic-bezier(.36, .07, .19, .97) infinite;
     animation-play-state: paused;
+    position: absolute;
+
+    
+    
+    
 }
 
 .pokeball:hover {
@@ -113,18 +122,26 @@ body {
 }
 
 .pokemon-list {
+
     list-style-type: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 40px;
+    gap: 20px;
     display: grid;
-    }
+    
+}
     
 h1 {
-    text-indent: 25px;
+    text-indent: 20%;
     color: #056CF2;
     font-size: 75px;
     font-family: 'Pokemon Solid', sans-serif;
-    border-bottom: 2px solid #DEDEDE;
+    border-bottom: 2px solid #F2766B;
+    background-color: #C0D9FC;
+    height: 80%;
+    
+
+    
+
 
 }
 
@@ -270,18 +287,19 @@ body {
 }
 
 #modal-container {
-    display: none;
+   display: none;
   }
   
   .modal {
     margin: auto;
     display: inline-block;
     box-sizing: border-box;
-    background: #fff;
+    position: relative;
+    background: #41BDD9;
     padding: 15px;
     width: 100%;
     max-width: 700px;
-    text-align: left;
+    text-align: center;
   }
   
   .modal-close {
@@ -290,20 +308,25 @@ body {
     appearance: none;
     border: 0;
     background: none;
-    color: #777;
+    color: whitesmoke;
     text-decoration: underline;
+    cursor: pointer;
   }
   
-  .modal h1 {
+  h2 {
     margin-top: 0;
-  }
+    font-family:'Anime Ace', sans-serif;;
+    font-style: bold; 
+}
   
-  .modal p {
+  p2 {
     margin-bottom: 0;
-  }
+    font-family:'Anime Ace', sans-serif;
+    font-style: bold;  
+}
   
 
-.is-visible {
+#modal-container.is-visible {
     position: fixed;
     padding: 20px;
     box-sizing: border-box;
@@ -311,7 +334,7 @@ body {
     left: 0px;
     width: 100%;
     height: 100%;
-    background: blue;
+    background-color: rgba(255,255,255,0.5);
     z-index: 999;
     overflow: auto;
     display: grid;

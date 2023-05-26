@@ -8,19 +8,20 @@
   <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/anime-ace" rel="stylesheet">
   <title>Simple JS App</title>
+
 </head>
+
+<div id="modal-container">
+  <div class="modal">
+    <button class="modal-close">Close</button>
+    <div class="modal-pokemon-content"></div>
+  </div>
+</div>
 
 <body>
   <h1>Pokedex</h1>
-  <ul class="pokemon-list"></ul>
-  <div id="modal-container">
-    <div class="modal">
-      <button class="modal-close">Close</button>
-      <h2>Modal title</h2>
-      <p2>Modal text</p2>       
-    </div>
-  </div>
-  <script src="js/promise-polyfill.js"></script>
+<ul class="pokemon-list"></ul>
+<script src="js/promise-polyfill.js"></script>
   <script src="js/fetch-polyfill.js"></script>
   <script src="js/script.js"></script>
   <div class="box child-to-body">
@@ -29,10 +30,11 @@
       <div class="pokeball">
         <div class="pokeball__button"></div>
 
-</div>
-</div>      
-</div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
 
 <!--Credit to https://github.com/athanstan/css-pokeball/blob/master/style.css for pokeball animation-->
