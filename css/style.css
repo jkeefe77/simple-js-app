@@ -337,4 +337,23 @@ body {
     text-align: center;
 }
 
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar>.container {
+    justify-content: center;
+}
+
+.list-group-item {
+    background-color: var(--primary-color-lighter);
+    border: none;
+}
+
+.btn {
+    color: var(--primary-color-lighter);
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
 
