@@ -20,7 +20,7 @@
     font-weight: 100%;
     border-radius: 100%;
     color: black;
-    }
+    } */
 
 .button-class:hover {
     background-color: #BF2424;
@@ -31,8 +31,7 @@ body {
     background-color: #76AAE8;
     display: grid;
     margin: 0px;
-    padding: 0px;
-    margin-top: -10%;
+    
 }
 
 
@@ -47,11 +46,10 @@ body {
 
 .poke_box {
     position: fixed;
-    bottom: 185px;
-    right: 200px;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: fixed;
+    
 }
 
 .pokeball {
@@ -119,24 +117,26 @@ body {
     }
 }
 
-.pokemon-list {
+.list-group {
 
     list-style-type: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
     display: grid;
+    padding-top: 2rem;
     
 }
     
-h1 {
-    text-indent: 20%;
+header .row  {
     color: #056CF2;
-    font-size: 100px;
     font-family: 'Pokemon Solid', sans-serif;
     background-color: #C0D9FC;
-    height: 60%;
     text-shadow: 2px 2px #BF2424; 
+    font-size: 175px;
+    height: 320px;
+    padding-top: 2rem;
     
+   
 }
 
 ::-webkit-validation-bubble-arrow-clipper {
@@ -149,16 +149,14 @@ h1 {
 
 img {
     position: relative;
-    bottom: 50px;   
+    bottom: 40px;   
     width: 150px;
 }
 
 p {
     position: relative;
-    top: 9rem;
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: -2px;
+    top: 120px;
+    font-size: 15px;
     margin-bottom: 0;
     font-family:'Anime Ace', sans-serif;
     font-style: bold; 
@@ -173,7 +171,7 @@ p {
 
 .poke_box {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -190,8 +188,8 @@ p {
     box-shadow: inset -10px 10px 0 10px #ccc;
     animation: shake 1.25s cubic-bezier(.36, .07, .19, .97) infinite;
     animation-play-state: paused;
-    bottom: 300px;
-    left: 400px;
+    bottom: 3px;
+    left: 4px;
 }
 
 .pokeball:hover {
@@ -288,16 +286,28 @@ body {
    display: none;
   }
   
-  .modal {
+  
+  h2 {
+    font-family:'Anime Ace', sans-serif;;
+    font-style: bold; 
+    font-size: 30px;
+    
+    
+
+    
+   
+}
+  
+  
+  .modal-body {
     margin: auto;
     display: inline-block;
     box-sizing: border-box;
     position: relative;
-    background: #41BDD9;
-    padding: 15px;
-    height: 300px;
-    width: 300px;
-    max-width: 700px;
+    background: #C0D9FC;
+    padding: 3rem;
+    height: 20rem;
+    width: 20rem;
     text-align: center;
   }
   
@@ -305,55 +315,37 @@ body {
     float: right;
     -webkit-appearance: none;
     appearance: none;
-    border: 0;
-    background: none;
-    color: whitesmoke;
-    text-decoration: underline;
+    background:white;
+    color: black;
+    text-decoration: none;
     cursor: pointer;
-  }
-  
-  h2 {
-    margin-top: 0;
-    font-family:'Anime Ace', sans-serif;;
-    font-style: bold; 
+    
 }
   
-   
-
   
-
+   
 #modal-container.is-visible {
     position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.5);
+    padding: 2px;
+    left: 40%;
+    top: 40%;
+    color: #BF2424;
     z-index: 999;
     overflow: auto;
     display: grid;
     text-align: center;
 }
 
-.navbar {
-    background-color: var(--primary-color);
+.modal-header {
+    background-color: #056CF2;
+  
 }
 
-.navbar>.container {
-    justify-content: center;
+.modal-footer {
+    background-color: #056CF2;
+    height: 4rem;
 }
 
-.list-group-item {
-    background-color: var(--primary-color-lighter);
-    border: none;
-}
 
-.btn {
-    color: var(--primary-color-lighter);
-    background-color: var(--secondary-color);
-    width: 100%;
-}
 
 
