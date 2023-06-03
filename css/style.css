@@ -4,9 +4,9 @@
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin: px 20px;
-    width: 200px;
-    height: 200px;
+    margin: 20px 20px;
+    width: 260px;
+    height: 260px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -20,22 +20,27 @@
     font-weight: 100%;
     border-radius: 100%;
     color: black;
-    } */
+
+}
 
 .button-class:hover {
     background-color: #BF2424;
     color: white;
 }
- 
+
 body {
     background-color: #76AAE8;
-    display: grid;
-    margin: 0px;
-    
+
+
 }
 
 
-
+button {
+    background-color: #BF2424;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
 
 .child-to-body {
     width: 300px;
@@ -49,7 +54,7 @@ body {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: fixed;
-    
+
 }
 
 .pokeball {
@@ -60,7 +65,9 @@ body {
     box-shadow: inset -10px 10px 0 10px #ccc;
     animation: shake 1.25s cubic-bezier(.36, .07, .19, .97) infinite;
     animation-play-state: paused;
-    position: fixed;
+    position: relative;
+    
+
 }
 
 .pokeball:hover {
@@ -120,25 +127,30 @@ body {
 .list-group {
 
     list-style-type: none;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 10fr 10fr 10fr 10fr 10fr;
     gap: 100px;
     display: grid;
-    padding-top: 2rem;
-    max-width: max-content;
-    
+    position: relative;
+    margin-left: 10rem;
+
 }
-    
-header .row  {
+
+header .row {
     color: #056CF2;
     font-family: 'Pokemon Solid', sans-serif;
     background-color: #C0D9FC;
-    text-shadow: 2px 2px #BF2424; 
+    text-shadow: 2px 2px #BF2424;
     font-size: 175px;
-    height: 320px;
-    padding-top: 2rem;
-    
+    height: 350px;
+    padding-top: 4rem;
+    position: relative;
    
+
+
+
 }
+
+
 
 ::-webkit-validation-bubble-arrow-clipper {
     height: 100vh;
@@ -153,33 +165,35 @@ header .row  {
 p {
     position: relative;
     top: -10px;
-    font-size: 20px;
+    font-size: 60px;
     margin-bottom: 0;
-    font-family:'Anime Ace', sans-serif;
-    font-style: bold; 
+    font-family: 'Anime Ace', sans-serif;
+    font-style: bold;
     text-align: center;
 }
 
 img {
-    position: relative;;
-    bottom: 1rem;   
-    width: 30%;
-    font-family:'Anime Ace', sans-serif;
-    left: 35%; 
-    
-    
-    
- } 
+    position: relative;
+    bottom: 1rem;
+    width: 50%;
+    font-family: 'Anime Ace', sans-serif;
+    left: 25%;
 
-  
+
+
+
+}
+
+
 .modal-content {
     height: 25%;
-    width: 60%;
+    width: 100%;
     box-sizing: border-box;
     background-color: #C0D9FC;
 
-    
+
 }
+
 .child-to-body {
     width: 300px;
     height: 400px;
@@ -195,8 +209,8 @@ img {
     transform: translate(-50%, -50%);
 }
 
-.pokeball  {
-    position: relative;
+.pokeball {
+    position: fixed;
     width: 150px;
     height: 150px;
     background: #fff;
@@ -206,8 +220,8 @@ img {
     box-shadow: inset -10px 10px 0 10px #ccc;
     animation: shake 1.25s cubic-bezier(.36, .07, .19, .97) infinite;
     animation-play-state: paused;
-    bottom: 3px;
-    left: 4px;
+    top: -90px;
+    left: -100px;
 }
 
 .pokeball:hover {
@@ -295,63 +309,13 @@ img {
         width: 100%;
     }
 }
-html, 
+
+html,
 body {
-  font-family: Arial, sans-serif;
-}
-
-/* #modal-container {
-   display: none;
-  }
-  
-  
-  h2 {
-    font-family:'Anime Ace', sans-serif;;
-    font-style: bold; 
-    font-size: 30px;
-    
-    
-
-    
+    font-family: Arial, sans-serif;
    
 }
-  
-  
- 
-    .modal-close {
-    float: right;
-    -webkit-appearance: none;
-    appearance: none;
-    background:white;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    
- }  
-  
-  
-   
-#modal-container.is-visible {
-    position: fixed;
-    padding: 2px;
-    left: 40%;
-    top: 40%;
-    color: #BF2424;
-    z-index: 999;
-    overflow: auto;
-    display: grid;
-    text-align: center;
-}
 
-.modal-header {
-    background-color: #056CF2;
-  
-}
-
-.modal-footer {
-    background-color: #056CF2;
-    height: 4rem;
-} */
 
 
 
