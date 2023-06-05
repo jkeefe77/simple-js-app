@@ -132,7 +132,7 @@ button {
     gap: 100px;
     display: grid;
     position: relative;
-    margin-left: 10rem;
+    margin-left: 1rem;
 
 }
 
@@ -150,7 +150,6 @@ header .row {
 
 
 }
-
 
 
 ::-webkit-validation-bubble-arrow-clipper {
@@ -221,7 +220,7 @@ img {
     box-shadow: inset -10px 10px 0 10px #ccc;
     animation: shake 1.25s cubic-bezier(.36, .07, .19, .97) infinite;
     animation-play-state: paused;
-    top: -90px;
+    top: -70px;
     left: -100px;
 }
 
@@ -317,7 +316,8 @@ body {
    
 }
 
-
-
-
+input [type=text] {
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
+}
 

@@ -73,6 +73,7 @@ let pokemonRepository = (function () {
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
       showModal(pokemon);
+      console.log(pokemon);
 
     });
   }
@@ -128,9 +129,12 @@ let pokemonRepository = (function () {
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
       item.weight = details.weight;
-      item.types = details.types;
-      item.abilities = details.abilities;
-   
+      item.types = details.types.map(function (pokemon) {
+        return pokemon.type.name 
+      });
+      item.abilities = details.abilities.map(function(pokemon) {
+   return pokemon.ability.name;
+  });
      
    
    
@@ -139,35 +143,26 @@ let pokemonRepository = (function () {
     });
   }
 
+document.querySelector("#searchInput").addEventListener('keyup', function(e) {
+  let namesLI = document.getElementsByClassName('name');
 
-  let inputField = document.querySelector('input[type="search"]');
+  // Get Search Query
+  let searchQuery = searchInput.value.toLowerCase();
 
-function removeList() {
-  let pokemonList = document.querySelector(".list-group");
-  pokemonList.innerHTML = '';
-}
+  // Search Compare & Display
+  for (let index = 0; index < namesLI.length; index++) {
+          const name = namesLI[index].textContent.toLowerCase();
 
-function showErrorMessage() {
-  let pokemonList = document.querySelector(".list-group");
-  pokemonList.innerHTML = "<li>${message}</li>";
-}
-
-function addListPokemon(pokemon) {
-  pokemonList.addListItem(pokemon);
-}
-
-inputField.addEventListener('input', () => {
-  let query = inputField.value;
-  let filteredList = pokemonList.filterPokemons(query);
-  removeList();
-  if (filteredList.length === 0) {
-    showErrorMessage(
-      'Sorry. There are no Pokémon matching your search criteria.'
-    );
-  } else {
-    filteredList.forEach(addListPokemon);
+          if (name.includes(searchQuery)) {
+                  namesLI[index].style.display = 'block';
+          } else {
+                  namesLI[index].style.display = 'none';
+          }
   }
 });
+
+
+
 
 
  
@@ -188,8 +183,8 @@ return {
 
 
 pokemonRepository.loadList().then(function () {
-  pokemonRepository.getAll().forEach(function (pokemon) {
-    pokemonRepository.addListItem(pokemon);
+  pokemonRepository.getAll().forEach(function (pokemon, index) {
+    pokemonRepository.addListItem(pokemon, index + 1);
   });
 });
 
