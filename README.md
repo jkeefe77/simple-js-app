@@ -5,7 +5,6 @@
 -   [Overview](#overview)
     -   [Key Features](#key-features)
 -   [Links](#links)
--   [Process](#process)
     -   [Programming Languages](#programming-languages)
     -   [Dependencies](#dependencies)
     -   [Used Resources](#used-resources)
@@ -22,7 +21,7 @@ A functioning search application dedicated to Pokemon which displays their physi
 
 ## Links
 
--   [My Code] https://github.com/jkeefe77/simple-js-app
+-   [My Code] (https://github.com/jkeefe77/simple-js-app)
 -   [Project Site]
 
 ### Programming Languages
