@@ -21,7 +21,7 @@ A functioning search application dedicated to Pokemon which displays their physi
 
 ## Links
 
--   [My Code] (https://github.com/jkeefe77/simple-js-app)
+-   [My Code](https://github.com/jkeefe77/simple-js-app)
 -   [Project Site]
 
 ### Programming Languages
@@ -34,8 +34,8 @@ A functioning search application dedicated to Pokemon which displays their physi
 
 -   Polyfills
 
-    -   [Promise] (https://github.com/jkeefe77/simple-js-app/blob/main/js/promise-polyfill.js)
-    -   [Fetch] (https://github.com/jkeefe77/simple-js-app/blob/main/js/fetch-polyfill.js)
+    -   [Promise](https://github.com/jkeefe77/simple-js-app/blob/main/js/promise-polyfill.js)
+    -   [Fetch](https://github.com/jkeefe77/simple-js-app/blob/main/js/fetch-polyfill.js)
 
 -   Frameworks
 
@@ -44,8 +44,8 @@ A functioning search application dedicated to Pokemon which displays their physi
     -   [Stylelint](https://github.com/jkeefe77/simple-js-app/blob/main/js/stylelint.config.js)
 
 -   Formatting
-    -   [Prettier] (https://github.com/jkeefe77/simple-js-app/blob/main/js/prettier.config.js)
+    -   [Prettier](https://github.com/jkeefe77/simple-js-app/blob/main/js/prettier.config.js)
 
 ### Used Resources
 
--   [API] (https://pokeapi.co/api/v2/pokemon/)
+-   [API](https://pokeapi.co/api/v2/pokemon/)
