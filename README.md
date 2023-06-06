@@ -35,7 +35,7 @@ A functioning search application dedicated to Pokemon which displays their physi
 
 -   Polyfills
 
-    -   [Promise] (https://github.com/jkeefe77 simple-js-app/blob/main/js/promise-polyfill.js)
+    -   [Promise] (https://github.com/jkeefe77/simple-js-app/blob/main/js/promise-polyfill.js)
     -   [Fetch] (https://github.com/jkeefe77/simple-js-app/blob/main/js/fetch-polyfill.js)
 
 -   Frameworks
