@@ -22,7 +22,7 @@ A functioning search application dedicated to Pokemon which displays their physi
 ## Links
 
 -   [My Code](https://github.com/jkeefe77/simple-js-app)
--   [Project Site]
+-   [Project Site](https://jkeefe77.github.io/portfolio-simple-js-app/)
 
 ### Programming Languages
 
