@@ -14,29 +14,25 @@
     border: 5px solid #000;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: inset -10px 10px 0 1px #BF2424;
+    box-shadow: inset -10px 10px 0 1px #bf2424;
     font-family: 'Anime Ace', sans-serif;
     font-style: bold;
     font-weight: 100%;
     border-radius: 100%;
     color: black;
-
 }
 
 .button-class:hover {
-    background-color: #BF2424;
+    background-color: #bf2424;
     color: white;
 }
 
 body {
-    background-color: #76AAE8;
-
-
+    background-color: #76aae8;
 }
 
-
 button {
-    background-color: #BF2424;
+    background-color: #bf2424;
     text-align: center;
     color: white;
     margin-top: 50px;
@@ -47,7 +43,6 @@ button {
     width: 300px;
     height: 400px;
     flex-shrink: 0;
-
 }
 
 .poke_box {
@@ -55,7 +50,6 @@ button {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: fixed;
-
 }
 
 .pokeball {
@@ -64,22 +58,18 @@ button {
     border-radius: 50%;
     overflow: hidden;
     box-shadow: inset -10px 10px 0 10px #ccc;
-    animation: shake 1.25s cubic-bezier(.36, .07, .19, .97) infinite;
+    animation: shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
     animation-play-state: paused;
     position: relative;
-    
-
 }
 
 .pokeball:hover {
     animation-play-state: running;
 }
 
-
-
 .pokeball::before,
 .pokeball::after {
-    content: "";
+    content: '';
     position: absolute;
 }
 
@@ -107,7 +97,7 @@ button {
     border-radius: 50%;
     z-index: 10;
     box-shadow: 0 0 0 7px black;
-    animation: blink .5s alternate infinite;
+    animation: blink 0.5s alternate infinite;
     animation-play-state: paused;
 }
 
@@ -126,31 +116,24 @@ button {
 }
 
 .list-group {
-
     list-style-type: none;
     grid-template-columns: 10fr 10fr 10fr 10fr 10fr;
     gap: 100px;
     display: grid;
     position: relative;
     margin-left: 1rem;
-
 }
 
 header .row {
-    color: #056CF2;
+    color: #056cf2;
     font-family: 'Pokemon Solid', sans-serif;
-    background-color: #C0D9FC;
-    text-shadow: 2px 2px #BF2424;
+    background-color: #c0d9fc;
+    text-shadow: 2px 2px #bf2424;
     font-size: 175px;
     height: 350px;
     padding-top: 4rem;
     position: relative;
-   
-
-
-
 }
-
 
 ::-webkit-validation-bubble-arrow-clipper {
     height: 100vh;
@@ -159,8 +142,6 @@ header .row {
     justify-content: center;
     align-items: center;
 }
-
-
 
 p {
     position: relative;
@@ -178,27 +159,19 @@ img {
     width: 50%;
     font-family: 'Anime Ace', sans-serif;
     left: 25%;
-
-
-
-
 }
-
 
 .modal-content {
     height: 25%;
     width: 100%;
     box-sizing: border-box;
-    background-color: #C0D9FC;
-
-
+    background-color: #c0d9fc;
 }
 
 .child-to-body {
     width: 300px;
     height: 400px;
     flex-shrink: 0;
-
 }
 
 .poke_box {
@@ -218,7 +191,7 @@ img {
     border-radius: 50%;
     overflow: hidden;
     box-shadow: inset -10px 10px 0 10px #ccc;
-    animation: shake 1.25s cubic-bezier(.36, .07, .19, .97) infinite;
+    animation: shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
     animation-play-state: paused;
     top: -70px;
     left: -100px;
@@ -256,7 +229,7 @@ img {
 
 .pokeball::before,
 .pokeball::after {
-    content: "";
+    content: '';
     position: absolute;
 }
 
@@ -284,7 +257,7 @@ img {
     border-radius: 50%;
     z-index: 10;
     box-shadow: 0 0 0 7px black;
-    animation: blink .5s alternate infinite;
+    animation: blink 0.5s alternate infinite;
     animation-play-state: paused;
 }
 
@@ -302,8 +275,6 @@ img {
     }
 }
 
-
-
 @media only screen and (max-width: 480px) {
     img {
         width: 100%;
@@ -313,11 +284,9 @@ img {
 html,
 body {
     font-family: Arial, sans-serif;
-   
 }
 
-input [type=text] {
+input [type='text'] {
     -webkit-transition: width 0.15s ease-in-out;
     transition: width 0.15s ease-in-out;
 }
-
