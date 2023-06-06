@@ -1,3 +1,15 @@
+# Pokedex Application
+
+## Table of Contents
+
+-   [Overview](#overview)
+    -   [Key Features](#key-features)
+-   [Links](#links)
+-   [Process](#process)
+    -   [Programming Languages](#programming-languages)
+    -   [Dependencies](#dependencies)
+    -   [Used Resources](#used-resources)
+
 ## Overview
 
 A functioning search application dedicated to Pokemon which displays their physical descriptors and abilities.
@@ -32,3 +44,7 @@ A functioning search application dedicated to Pokemon which displays their physi
 
 -   Formatting
 -   [Prettier] https://github.com/jkeefe77/simple-js-app/blob/main/js/prettier.config.js
+
+### Used Resources
+
+-   [API] (https://pokeapi.co/api/v2/pokemon/)
