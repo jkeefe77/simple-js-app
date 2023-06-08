@@ -1,4 +1,4 @@
-.button-class {
+ button {
     padding: 60px 2px;
     text-align: center;
     text-decoration: none;
@@ -10,7 +10,7 @@
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
-    background: #fff;
+    background: white;
     border: 5px solid #000;
     border-radius: 50%;
     overflow: hidden;
@@ -22,21 +22,13 @@
     color: black;
 }
 
-.button-class:hover {
+button:hover {
     background-color: #bf2424;
     color: white;
 }
 
 body {
     background-color: #76aae8;
-}
-
-button {
-    background-color: #bf2424;
-    text-align: center;
-    color: white;
-    margin-top: 50px;
-    border-color: white;
 }
 
 .child-to-body {
@@ -122,9 +114,10 @@ button {
     display: grid;
     position: relative;
     margin-left: 1rem;
+    margin-top: 10rem;
 }
 
-header .row {
+header  {
     color: #056cf2;
     font-family: 'Pokemon Solid', sans-serif;
     background-color: #c0d9fc;
@@ -132,8 +125,9 @@ header .row {
     font-size: 175px;
     height: 350px;
     padding-top: 4rem;
-    position: relative;
+    
 }
+
 
 ::-webkit-validation-bubble-arrow-clipper {
     height: 100vh;
@@ -275,7 +269,7 @@ img {
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1000px) {
     img {
         width: 100%;
     }
@@ -290,3 +284,19 @@ input [type='text'] {
     -webkit-transition: width 0.15s ease-in-out;
     transition: width 0.15s ease-in-out;
 }
+
+.navbar {
+    height: 7rem;
+    position: absolute;
+    width: 100%;;
+    
+}
+
+.search-button {
+    background-color: blue;
+    
+}
+
+
+
+

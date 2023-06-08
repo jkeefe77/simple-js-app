@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
     let pokemonList = []
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150'
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20'
 
     let modalCloseButton = document.querySelector('.modal-close')
 
@@ -80,7 +80,7 @@ let pokemonRepository = (function () {
     function addListItem(pokemon) {
         let pokemonList = document.querySelector('.list-group')
         let listpokemon = document.createElement('li')
-        listpokemon.classList.add('button-class')
+        listpokemon.classList.add('.')
 
         let button = document.createElement('button')
         button.innerText = pokemon.name
