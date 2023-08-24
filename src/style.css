@@ -46,7 +46,7 @@ header {
 }
 
 p {
-    font-size: 20px;
+    font-size: 2rem;
     margin-bottom: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
         'Lucida Sans', Arial, sans-serif;
@@ -55,18 +55,19 @@ p {
 
 img {
     width: 50%; /* Make images responsive */
+    margin-left: 25%;
 }
 
 .modal-content {
     height: auto; /* Adjusted height */
-    width: 50%;
+    width: auto;
     box-sizing: border-box;
     background-color: #c0d9fc;
 }
 
 @media only screen and (max-width: 1000px) {
     img {
-        width: 50%;
+        width: 100%;
     }
 }
 
