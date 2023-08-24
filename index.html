@@ -20,18 +20,21 @@
         />
         <title>Simple JS App</title>
     </head>
-
-    <header class="container-fluid">
-        <div class="row justify-content-center">Pokedex</div>
-    </header>
-    <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-warning p-4">
-                <h4 class="navbar-brand">Pokedex</h4>
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
+            <div class="poke_box">
+                <div class="poke_box">
+                    <div class="pokeball">
+                        <div class="pokeball__button"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <header class="row justify-content-center">
+        <div class="container">Pokedex</div>
+    </header>
     <body>
         <nav class="navbar navbar-light bg-warning">
             <form class="form-inline">
@@ -42,34 +45,11 @@
                     aria-label="Search"
                     id="searchInput"
                 />
-
-                <button
-                    class="search-button"
-                    type="submit"
-                >
-                    search
-                </button>
             </form>
         </nav>
 
         <ul class="list-group"></ul>
         <template data-user-template></template>
-
-        <div class="box child-to-body">
-            <img
-                src="pokeBannerGimp.png"
-                class="float-left"
-                width="250"
-                alt=""
-            />
-            <div class="poke_box">
-                <div class="poke_box">
-                    <div class="pokeball">
-                        <div class="pokeball__button"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Modal -->
         <div

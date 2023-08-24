@@ -125,6 +125,7 @@ let pokemonRepository = (function () {
                 item.weight = details.weight
                 item.types = details.types.map(function (pokemon) {
                     return pokemon.type.name
+                    
                 })
                 item.abilities = details.abilities.map(function (pokemon) {
                     return pokemon.ability.name
