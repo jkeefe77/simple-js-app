@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
     let pokemonList = []
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20'
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=50'
 
     let modalCloseButton = document.querySelector('.modal-close')
 
@@ -19,20 +19,22 @@ let pokemonRepository = (function () {
         modalHeader.empty()
         modalFooter.empty()
 
-        let titleElement = $('<h2>' + pokemon.name + '</h2')
+        let titleElement = $('<h2>' + pokemon.name.toUpperCase() + '</h2')
 
         let imageElement = $('<img class="img" style=:width:100%>')
         imageElement.attr('src', pokemon.imageUrl)
 
-        let contentElement = $('<p>' + pokemon.name + '<p>')
+        let contentElement = $('<p>')
+            .addClass('pokemon-title')
+            .text(`${pokemon.name.toUpperCase()}`)
 
-        let heightElement = $('<p>' + `Height : ${pokemon.height}</p>`)
+        let heightElement = $('<p>' + `Height: ${pokemon.height}</p>`)
 
-        let weightElement = $('<p>' + `Weight : ${pokemon.weight}</p>`)
-
-        let typeElement = $('<p>' + `Type : ${pokemon.types}</p>`)
-
-        let abilitiesElement = $('<p>' + `abilities : ${pokemon.abilities}</p>`)
+        let weightElement = $('<p>' + `Weight: ${pokemon.weight}</p>`)
+        let abilitiesString = pokemon.abilities.join(', ')
+        let abilitiesElement = $('<p>' + `Abilities: ${abilitiesString}</p>`)
+        let typeString = pokemon.types.join(', ')
+        let typeElement = $('<p>' + `Type: ${typeString}</p>`)
 
         modalTitle.append(titleElement)
         modalBody.append(contentElement)
@@ -125,7 +127,6 @@ let pokemonRepository = (function () {
                 item.weight = details.weight
                 item.types = details.types.map(function (pokemon) {
                     return pokemon.type.name
-                    
                 })
                 item.abilities = details.abilities.map(function (pokemon) {
                     return pokemon.ability.name

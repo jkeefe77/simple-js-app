@@ -83,3 +83,10 @@ input[type='text'] {
 .navbar {
     height: auto; /* Adjusted height */
 }
+
+.pokemon-title {
+    color: crimson;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
