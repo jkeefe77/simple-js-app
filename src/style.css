@@ -59,15 +59,16 @@ img {
 }
 
 .modal-content {
-    height: auto; /* Adjusted height */
-    width: auto;
+    height: 100%; /* Adjusted height */
+    width: 100%;
     box-sizing: border-box;
     background-color: #c0d9fc;
 }
 
 @media only screen and (max-width: 1000px) {
     img {
-        width: 100%;
+        max-width: 50%;
+        height: auto;
     }
 }
 
