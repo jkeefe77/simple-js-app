@@ -92,6 +92,7 @@ input[type='text'] {
     /* Add your custom styles here */
 
     color: white; /* Example text color */
+    background-color: #bf2424;
     border: none; /* Remove any borders */
     font-size: 20px; /* Example font size */
     font-weight: bold;
@@ -106,4 +107,7 @@ input[type='text'] {
 .modal-close-button span {
     /* Add your custom styles for the close icon */
     font-size: 30px; /* Example font size for the "x" symbol */
+}
+
+.modal-close-button:hover {
 }
