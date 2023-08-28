@@ -1,8 +1,8 @@
 let pokemonRepository = (function () {
     let pokemonList = []
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150'
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=50'
 
-    let modalCloseButton = document.querySelector('.modal-close')
+    let modalCloseButton = document.querySelector('modal-close')
 
     if (modalCloseButton) {
         modalCloseButton.addEventListener('click', hideModal)
@@ -19,20 +19,30 @@ let pokemonRepository = (function () {
         modalHeader.empty()
         modalFooter.empty()
 
-        let titleElement = $('<h2>' + pokemon.name + '</h2')
+        let closeButton = $(
+            '<button class="modal-close-button" type="button" data-dismiss="modal" aria-label="Close">'
+        )
+        closeButton.html('<span aria-hidden="true">&times;</span>')
+
+        // Append the close button to the modal header
+        modalHeader.append(closeButton)
+
+        let titleElement = $('<h2>' + pokemon.name.toUpperCase() + '</h2')
 
         let imageElement = $('<img class="img" style=:width:100%>')
         imageElement.attr('src', pokemon.imageUrl)
 
-        let contentElement = $('<p>' + pokemon.name + '<p>')
+        let contentElement = $('<p>')
+            .addClass('pokemon-title')
+            .text(`${pokemon.name.toUpperCase()}`)
 
-        let heightElement = $('<p>' + `Height : ${pokemon.height}</p>`)
+        let heightElement = $('<p>' + `Height: ${pokemon.height}</p>`)
 
-        let weightElement = $('<p>' + `Weight : ${pokemon.weight}</p>`)
-
-        let typeElement = $('<p>' + `Type : ${pokemon.types}</p>`)
-
-        let abilitiesElement = $('<p>' + `abilities : ${pokemon.abilities}</p>`)
+        let weightElement = $('<p>' + `Weight: ${pokemon.weight}</p>`)
+        let abilitiesString = pokemon.abilities.join(', ')
+        let abilitiesElement = $('<p>' + `Abilities: ${abilitiesString}</p>`)
+        let typeString = pokemon.types.join(', ')
+        let typeElement = $('<p>' + `Type: ${typeString}</p>`)
 
         modalTitle.append(titleElement)
         modalBody.append(contentElement)
@@ -44,7 +54,7 @@ let pokemonRepository = (function () {
     }
 
     function hideModal() {
-        exampleModal.classList.remove('is-visible')
+        $(`exampleModal`).modal('hide')
     }
 
     window.addEventListener('keydown', (e) => {
@@ -80,7 +90,7 @@ let pokemonRepository = (function () {
     function addListItem(pokemon) {
         let pokemonList = document.querySelector('.list-group')
         let listpokemon = document.createElement('li')
-        listpokemon.classList.add('button-class')
+        listpokemon.classList.add('.')
 
         let button = document.createElement('button')
         button.innerText = pokemon.name
