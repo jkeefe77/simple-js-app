@@ -65,6 +65,7 @@ img {
     background-color: #c0d9fc;
 }
 
+
 @media only screen and (max-width: 1000px) {
     img {
         max-width: 50%;
@@ -81,13 +82,32 @@ input[type='text'] {
     transition: width 0.15s ease-in-out;
 }
 
-.navbar {
-    height: auto; /* Adjusted height */
-}
+
 
 .pokemon-title {
     color: crimson;
     font-family: 'Pokemon Solid', sans-serif;
     font-size: 3rem;
     text-align: center;
+}
+
+.modal-close-button {
+  /* Add your custom styles here */
+  
+  color: white; /* Example text color */
+  border: none ; /* Remove any borders */
+  font-size: 20px; /* Example font size */
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  margin-left: 90%;
+  cursor: pointer;
+  content: 'x';
+  
+}
+
+/* Style the close icon (the "x" symbol) inside the button */
+.modal-close-button span {
+  /* Add your custom styles for the close icon */
+  font-size: 30px; /* Example font size for the "x" symbol */
 }

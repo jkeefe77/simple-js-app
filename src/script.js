@@ -2,7 +2,7 @@ let pokemonRepository = (function () {
     let pokemonList = []
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=50'
 
-    let modalCloseButton = document.querySelector('.modal-close')
+    let modalCloseButton = document.querySelector('modal-close')
 
     if (modalCloseButton) {
         modalCloseButton.addEventListener('click', hideModal)
@@ -18,6 +18,12 @@ let pokemonRepository = (function () {
         modalBody.empty()
         modalHeader.empty()
         modalFooter.empty()
+
+        let closeButton = $('<button class="modal-close-button" type="button" data-dismiss="modal" aria-label="Close">')
+        closeButton.html('<span aria-hidden="true">&times;</span>')
+    
+        // Append the close button to the modal header
+        modalHeader.append(closeButton)
 
         let titleElement = $('<h2>' + pokemon.name.toUpperCase() + '</h2')
 
@@ -46,7 +52,7 @@ let pokemonRepository = (function () {
     }
 
     function hideModal() {
-        exampleModal.classList.remove('is-visible')
+        $(`exampleModal`).modal('hide')
     }
 
     window.addEventListener('keydown', (e) => {
