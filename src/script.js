@@ -19,9 +19,11 @@ let pokemonRepository = (function () {
         modalHeader.empty()
         modalFooter.empty()
 
-        let closeButton = $('<button class="modal-close-button" type="button" data-dismiss="modal" aria-label="Close">')
+        let closeButton = $(
+            '<button class="modal-close-button" type="button" data-dismiss="modal" aria-label="Close">'
+        )
         closeButton.html('<span aria-hidden="true">&times;</span>')
-    
+
         // Append the close button to the modal header
         modalHeader.append(closeButton)
 
